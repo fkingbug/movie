@@ -20,7 +20,8 @@ const useSearch = () => {
 	const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
 		setsearchTerm(e.target.value)
 	}
-	return { isSuccess, handleSearch, data }
+	return { isSuccess, handleSearch, data, searchTerm }
 }
 
 export default useSearch
+//17:22
