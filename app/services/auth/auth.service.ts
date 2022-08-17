@@ -4,7 +4,6 @@ import Cookies from 'js-cookie'
 
 import { getAuthUrl } from '@/config/api.config'
 
-import { register } from '@/store/user/user.actions'
 import { IAuthResponse } from '@/store/user/user.interface'
 
 import { removeTokensStorage, saveToStorage } from './auth.helper'
@@ -32,6 +31,7 @@ export const AuthService = {
 		removeTokensStorage()
 		localStorage.removeItem('user')
 	},
+	//19:30
 	async getNewTokens() {
 		const refreshToken = Cookies.get('refreshToken')
 		const response = await axiosClassic.post<IAuthResponse>(
